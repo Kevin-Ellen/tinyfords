@@ -9,9 +9,6 @@ const imageRouter = async (url) => {
 
   const cacheTime = 604800;
 
-  console.log(newUrl);
-
-
   let response = await fetch(newUrl.toString(), {
       cf:{
         cacheTtl: cacheTime,
