@@ -13,6 +13,7 @@ export const dataPages = [
     template: 'home',
     active: true,
     mainNav:true,
+    footer:true,
     xmlSitemap: true,
     breadcrumbList: ['Home'],
     breadcrumbs: [],
@@ -35,6 +36,7 @@ export const dataPages = [
     active: true,
     mainNav:true,
     xmlSitemap: true,
+    footer:true,
     breadcrumbList: ['Home', 'All', 'Hot Wheels'],
     breadcrumbs: [],
     attributes:[
@@ -74,6 +76,7 @@ export const dataPages = [
     active: true,
     mainNav:true,
     xmlSitemap: true,
+    footer:true,
     breadcrumbList: ['Home', 'All', 'Matchbox'],
     breadcrumbs: [],
     attributes:[
@@ -113,6 +116,7 @@ export const dataPages = [
     active: true,
     mainNav:true,
     xmlSitemap: true,
+    footer:true,
     breadcrumbList: ['Home', 'All', 'Other'],
     breadcrumbs: [],
     attributes:[
@@ -152,6 +156,7 @@ export const dataPages = [
     active: false,
     mainNav:false,
     xmlSitemap: false,
+    footer:false,
     breadcrumbList: ['Home', 'All', 'Duplicates'],
     breadcrumbs: [],
     socialMedia: {
@@ -173,6 +178,7 @@ export const dataPages = [
     active: true,
     mainNav:false,
     xmlSitemap: true,
+    footer:true,
     breadcrumbList: ['Home', 'All'],
     breadcrumbs: [],
     socialMedia: {
@@ -194,6 +200,7 @@ export const dataPages = [
     active: false,
     mainNav:false,
     xmlSitemap: false,
+    footer:false,
     breadcrumbList: ['Home', 'About', 'Contact'],
     breadcrumbs: [],
     socialMedia: {
@@ -215,6 +222,7 @@ export const dataPages = [
     active: true,
     mainNav:false,
     xmlSitemap: false,
+    footer:true,
     breadcrumbList: ['Home', 'About', 'How to find the toy number'],
     breadcrumbs: [],
     socialMedia: {
@@ -236,6 +244,7 @@ export const dataPages = [
     active: true,
     mainNav:true,
     xmlSitemap: true,
+    footer:true,
     breadcrumbList: ['Home', 'About'],
     breadcrumbs: [],
     socialMedia: {
@@ -256,6 +265,7 @@ export const dataPages = [
     active: true,
     mainNav:false,
     xmlSitemap: false,
+    footer:false,
     breadcrumbList: ['Home'],
     breadcrumbs: [],
   },

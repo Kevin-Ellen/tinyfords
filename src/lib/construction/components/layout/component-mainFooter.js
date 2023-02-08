@@ -5,7 +5,7 @@ import { dataPages } from "../../../../data/data-pages";
 const mainFooter = () => {
 
   const arr = dataPages.map((obj, index) => {
-    if(obj.active){
+    if(obj.active && obj.footer){
       return (`
         <li><a href="${obj.slug}">${obj.name}</a></li>
         ${index !== dataPages.length - 1 ? `<li aria-hidden="true">/</li>` : ``}
