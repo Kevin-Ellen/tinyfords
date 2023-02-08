@@ -1,10 +1,5 @@
-Tiny Fords
-------
-
-Website created with Cloudflare Workers to keep track of my collection.
-
-
-## To-Do list
+To-Do list
+-------
 
 - [X] Canonical tags
 - [X] Preservation of search
@@ -13,19 +8,19 @@ Website created with Cloudflare Workers to keep track of my collection.
 - [X] Global search colours
 - [X] Dealing with 'null' for fields that are null
 - [X] Image router
-- [X] About page
+- [ ] About page
 - [ ] Search help page
-- [X] Footer
+- [ ] Footer
 - [X] Robots.txt
 - [X] XML sitemap
 
-- [X] Structured data
+- [ ] Structured data
 - [ ] Crawl of the website and check for errors
 - [ ] Custom error page (404)
-- [X] Metadata
-- [X] Social media tags
+- [ ] Metadata
+- [ ] Social media tags
 
 - [X] Domain
 - [ ] Google Analytics
 - [X] Search Console
-- [X] Service Worker
+- [ ] Service Worker

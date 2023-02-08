@@ -1,0 +1,17 @@
+// styles.scss - Where everything is pulled together
+
+// Globals
+@use 'base/_base-global.scss';
+
+@use 'base/_base-fonts.scss';
+
+@use 'components/_comp-mainNav.scss';
+@use 'components/_comp-mainMain.scss';
+@use 'components/_comp-breadcrumbs.scss';
+@use 'components/_comp-content.scss';
+@use 'components/_comp-mainFooter.scss';
+@use 'components/_comp-pagination.scss';
+@use 'components/_comp-searchBar.scss';
+
+@use 'templates/_template-grid.scss';
+@use 'templates/_template-card.scss';

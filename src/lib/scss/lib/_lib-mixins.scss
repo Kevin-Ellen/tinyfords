@@ -1,0 +1,39 @@
+// lib > _lib_mixins.scss - all mixins
+
+@use "sass:map";
+
+@use '_lib-vars.scss';
+
+@mixin removeListStyle{
+  list-style: none;
+  padding:0;
+  margin:0;
+}
+
+@mixin linkStyle{
+  color:map-deep-get($colours, links, normal);
+  text-decoration: none;
+  
+  transition:all 0.3s;
+  
+  &:visited{
+    color:map-deep-get($colours, links, normal);
+  }
+
+  &:hover{
+    transition:all 0.3s;
+    text-decoration: underline;
+    font-weight:500;
+    color:map-deep-get($colours, links, hover);
+  }
+}
+
+@mixin roundedTop{
+  border-top-right-radius: calc(map.get($spacing, padding) / 2);
+}
+
+@mixin desktop{
+  @media only screen and (min-width: $screen-width){
+    @content;
+  }
+}

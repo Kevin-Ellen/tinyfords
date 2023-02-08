@@ -1,0 +1,54 @@
+// components > _comp-searchBar.scss - All things searchBar
+
+@use "sass:map";
+
+@import '../lib/_lib-mixins.scss', '../lib/_lib-vars.scss', '../lib/_lib-functions.scss';
+
+.searchBar{
+  display:flex;
+  flex-wrap:nowrap;
+  overflow: hidden;
+  border-radius: 9px;
+  max-width: 500px;
+  border: 1px solid rgba(0,0,0,0.4);
+
+  input[type='text'],
+  input[type='search']{
+    background: white;
+    height:35px;
+  }
+
+  input[type='text'],
+  input[type='search'],
+  button{
+    border:none;
+    font-family: map.get($fonts, 'body');
+  }
+
+
+  input[type='text'],
+  input[type='search']{
+    flex-grow: 1;
+    border:none;
+    padding-left:5px;
+  }
+  button{
+    justify-self:flex-end;
+    transition:all 0.3s;
+    display:flex;
+    align-items:center;
+    justify-content: stretch;
+    background: black;
+    width:35px;
+
+    &:hover{
+      
+      background: map-deep-get($colours, accents, red);
+    }
+
+    svg{
+      height: 60%;
+      fill: map-deep-get($colours, accents, yellow);
+    }
+  }
+}

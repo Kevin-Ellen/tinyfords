@@ -1,0 +1,29 @@
+// templates > _template-card.scss - Basic cards
+
+@use "sass:map";
+
+@import '../lib/_lib-mixins.scss', '../lib/_lib-vars.scss', '../lib/_lib-functions.scss';
+
+.card{
+  @include roundedTop;
+  background: map-deep-get($colours, 'cards', 'background');
+  max-width:150px;
+  font-size:0.8rem;
+  overflow:hidden;
+  
+
+  img{
+    width:150px;
+    height:150px;
+  }
+
+  .cardContent{
+    @include removeListStyle;
+    padding:calc(map.get($spacing, padding) * 0.5);
+
+    h3{
+      font-size:1.2em;
+      margin: 0 0 calc(map.get($spacing, padding) * 0.5);
+    }
+  }
+}

@@ -1,0 +1,71 @@
+// base >_base_global.scss - all global items and css reset
+
+@use "sass:map";
+
+@import '../lib/_lib-mixins.scss', '../lib/_lib-vars.scss', '../lib/_lib-functions.scss';
+
+::selection {
+  color: map-deep-get($colours, accents, yellow);
+  background: map-deep-get($colours, accents, red);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: map.get($fonts, 'body');
+  font-size: 18px;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 300;
+  line-height: 23px;
+  background: map-deep-get($colours, 'backgrounds', 'body');
+  max-width: 1200px;
+  margin:0 auto;
+}
+
+.a11y {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+$baseHeading: 2.4rem;
+
+h1 {
+  font-size: $baseHeading;
+}
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: map.get($fonts, 'headings');
+    margin: calc(map.get($spacing, padding) * 2.5) 0;
+    line-height:1em;
+    text-transform: uppercase;
+  }
+}
+
+@for $i from 2 through 6 {
+  h#{$i} {
+    font-size: calc($baseHeading - ($baseHeading * ($i - 1)*(6/100)));
+  }
+}
+
+

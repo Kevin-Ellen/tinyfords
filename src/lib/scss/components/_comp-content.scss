@@ -1,0 +1,11 @@
+// components > _comp-content.scss - All content stuff
+
+@use "sass:map";
+
+@import '../lib/_lib-mixins.scss', '../lib/_lib-vars.scss', '../lib/_lib-functions.scss';
+
+.compContent{
+  background:map-deep-get($colours, backgrounds, content);
+  padding: calc(map.get($spacing, padding) / 2);
+  margin: map.get($spacing, padding) 0 calc(map.get($spacing, padding) * 5);
+}

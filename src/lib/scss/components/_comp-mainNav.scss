@@ -1,0 +1,208 @@
+// components > _comp-mainNav.scss - main navigation
+
+@use "sass:map";
+
+@import '../lib/_lib-mixins.scss', '../lib/_lib-vars.scss', '../lib/_lib-functions.scss';
+
+.mainNav{
+  width:100%;
+  position:fixed;
+  top:0;
+  max-width: map.get($spacing, max-width);
+  background:map-deep-get($colours, backgrounds, menu);
+
+  .mainNavBox{
+    display: none;
+
+    & ~ .mainNavMenu{
+      height:0;
+      max-height:0;
+      transition:all 0.5s;
+      
+      @include desktop{
+        height: auto;
+        max-height: revert;
+      }
+    }
+
+    &:checked ~ .mainNavMenu{
+      height:auto;
+      max-height:100vh;
+      margin-top: map.get($spacing, padding);
+
+      @include desktop{
+        height: auto;
+        max-height: revert;
+      }
+    }
+  }
+  
+
+  .mainNavHeader{
+    display:grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr auto auto;
+    grid-auto-rows: 0;
+    align-items: center;
+    margin: map.get($spacing, padding) calc(1.5 * map.get($spacing, padding));
+
+    @include desktop{
+      grid-template-rows: 1fr auto;
+
+      .mainNavMenu{
+        grid-column: 1/2;
+      }
+    }
+
+    .mainNavRightSide{
+      display:flex;
+      justify-content: flex-end;
+      gap: map.get($spacing, 'padding');
+
+      .noNetwork{
+        align-self: center;
+        fill: map-deep-get($colours, accents, red);
+      }
+    }
+
+
+    .mainNavLabel{
+      width: 40px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      border-radius: 50%;
+      transition:all 0.3s;
+
+      &[for="mainNavBox"]{
+        grid-column: 1 / 2;
+        @include desktop{
+          display:none;
+        }
+      }
+
+
+      &[for="mainNavSearch"]{
+        border-radius:50%;
+        fill: map-deep-get($colours, accents, yellow);
+        background: black;
+        grid-column: 3 / 3;
+        justify-self: right;
+
+        &:hover{
+          background: map-deep-get($colours, accents, blue);
+          transition:all 0.3s;
+        }
+
+      }
+    }
+
+    .mainNavName{
+      font-family: map.get($fonts, headings);
+      font-weight:600;
+      font-size:1.5rem;
+      margin:0;
+      grid-column: 2/3;
+      text-align:center;
+
+      a{
+        color:black;
+        text-decoration: none;
+        &:visited{
+          color:black;
+        }
+        &:hover{
+          text-decoration:underline;
+        }
+      }
+      
+    }
+  }
+
+  .mainNavMenu{
+    overflow:hidden;
+    grid-column: 1/4;
+
+    @include desktop{
+      overflow:revert;
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
+    
+
+    .mainMenu{
+      @include removeListStyle;
+      @include desktop{
+        font-size:0.8rem;
+      }
+
+      li{
+        a{
+          padding: map.get($spacing, padding);
+          display:block;
+          @include linkStyle;
+
+          @include desktop{
+            border:none;
+            padding: map.get($spacing, padding) calc(map.get($spacing, padding) / 2);
+          }
+
+        }
+        &:not(:last-of-type) a{
+          border-bottom:1.5px solid black;
+          @include desktop{
+            border:none;
+          }
+        }
+        &:nth-of-type(1) a{
+          border-top:1.5px solid black;
+
+          @include desktop{
+            border:none;
+          }
+        }
+      }
+
+      @include desktop{
+        display:flex;
+        align-items: center;
+      }
+    }
+  }
+
+  .mainNavBox{
+    display: none;
+
+    & ~ .mainSearch{
+      height:0;
+      max-height:0;
+      transition:all 0.5s;
+      grid-column: 1/4;
+      grid-row: 3/4;
+
+      @include desktop{
+        grid-row: 2/3;
+      }
+    }
+
+    &[id='mainNavSearch']:checked ~ .mainSearch{
+      height:auto;
+      max-height:100vh;
+    }
+  }
+
+  .mainSearch{
+    background:map-deep-get($colours, backgrounds, menu);
+    display:flex;
+    justify-content:flex-end;
+    overflow: hidden;
+
+    .searchBar{
+      margin:map.get($spacing, padding) 0;
+      flex-grow: 1;
+    }
+  }
+}
+

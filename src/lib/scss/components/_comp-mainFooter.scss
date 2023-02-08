@@ -1,0 +1,43 @@
+// components > _comp-breadcrumbs.scss - All things breadcrumbs
+
+@use "sass:map";
+
+@import '../lib/_lib-mixins.scss', '../lib/_lib-vars.scss', '../lib/_lib-functions.scss';
+
+.mainFooter{
+  background: map-deep-get($colours, backgrounds, footer);
+  padding:map.get($spacing, padding);
+  margin-top: calc(map.get($spacing, padding) * 5);
+  color:white;
+  font-size: 0.8rem;
+
+  h2{
+    font-size:1.05em;
+  }
+
+  .mainFooterLinks{
+    @include removeListStyle;
+    display: flex;
+    flex-wrap:wrap;
+    gap: calc(map.get($spacing, padding) / 2);
+    margin:calc(map.get($spacing, padding) * 2) 0;
+    padding: map.get($spacing, padding) 0 ;
+    border-top: 1px solid white;
+    li{
+
+      a{
+        color:white;
+        display:block;
+        text-decoration:none;
+        
+        &:visited{
+          color:white;
+        }
+
+        &:hover{
+          text-decoration:underline;
+        }
+      }
+    }
+  }
+}

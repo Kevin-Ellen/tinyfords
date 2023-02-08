@@ -1,0 +1,42 @@
+// components > _comp-pagination.scss - All things pagination
+
+@use "sass:map";
+
+@import '../lib/_lib-mixins.scss', '../lib/_lib-vars.scss', '../lib/_lib-functions.scss';
+
+.pagination{
+  .paginationContainer{
+    @include removeListStyle;
+
+    background: map-deep-get($colours, pagination, 'background');
+    padding: calc(map.get($spacing, padding) * 1) 0;
+
+    gap: map.get($spacing, padding);
+    flex-wrap: wrap;
+    display:flex;
+    justify-content:space-evenly;
+    margin: calc(map.get($spacing, padding) * 3) 0;
+
+    li{
+
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      align-content:stretch;
+    }
+
+    a{
+      @include linkStyle;
+      display:block;
+      padding: map.get($spacing, padding);
+      height:55px;
+      width: 55px;
+      text-align: center;
+      @include roundedTop;
+
+      &:hover{
+        background:map-deep-get($colours, pagination, hover);
+      }
+    }
+  }
+}

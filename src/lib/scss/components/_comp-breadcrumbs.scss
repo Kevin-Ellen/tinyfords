@@ -1,0 +1,35 @@
+// components > _comp-breadcrumbs.scss - All things breadcrumbs
+
+@use "sass:map";
+
+@import '../lib/_lib-mixins.scss', '../lib/_lib-vars.scss', '../lib/_lib-functions.scss';
+
+.breadBin{
+  margin:calc(36px + 3 * map.get($spacing, padding)) calc(1.5 * map.get($spacing, padding)) map.get($spacing, padding);
+
+  .breadcrumbs{
+    @include removeListStyle;
+    display:flex;
+    font-size:0.8rem;
+
+    li{
+
+      &:first-of-type a{
+        padding-left:0;
+      }
+
+      a{
+        @include linkStyle;
+        padding:0.5em;
+
+        &[aria-current="page"]{
+          font-weight:600;
+        }
+      }
+    }
+  }
+
+  @include desktop{
+    margin:calc(80px + 3 * map.get($spacing, padding)) calc(1.5 * map.get($spacing, padding)) map.get($spacing, padding);
+  }
+}

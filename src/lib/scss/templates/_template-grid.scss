@@ -1,0 +1,13 @@
+// templates > _template-grid.scss - Basic grid layout
+
+@use "sass:map";
+
+@import '../lib/_lib-mixins.scss', '../lib/_lib-vars.scss', '../lib/_lib-functions.scss';
+
+.itemsGrid{
+  display: flex;
+  gap: map.get($spacing, padding);
+  flex-wrap:wrap;
+  justify-content:space-evenly;
+
+}

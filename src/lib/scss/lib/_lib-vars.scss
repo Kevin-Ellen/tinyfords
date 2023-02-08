@@ -1,0 +1,40 @@
+// lib > _lib_vars.scss - all variables
+
+@use "sass:map";
+
+$fonts: (
+  body: ('Montserrat Alternates', sans-serif),
+  headings: ('Quicksand', sans-serif),
+);
+
+$spacing: (
+  max-width: 1200px,
+  padding:16px,
+);
+
+$screen-width:500px;
+
+$colours: (
+  backgrounds: (
+    body: rgba(black, 0.02),
+    menu: white,
+    content: white,
+    footer: black,
+  ),
+  links: (
+    normal: black,
+    hover: rgba(black,0.5),
+  ),
+  cards: (
+    background: white,
+  ),
+  pagination: (
+    background: white,
+    hover: rgba(black, 0.1),
+  ),
+  accents: (
+    red: rgba(237, 34, 40,1),
+    yellow: rgb(248, 238, 37),
+    blue: rgb(0, 84, 144),
+  ),
+);
