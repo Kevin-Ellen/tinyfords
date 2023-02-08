@@ -4,10 +4,12 @@ const imageRouter = async (url) => {
   const newUrl = new URL(url);
   newUrl.host = 'raw.githubusercontent.com';
   newUrl.pathname = url.pathname === '/favicon.ico' ?
-    `/Kevin-Ellen/tinyfords-photos/main/icons/favicon.ico` :
-    `/Kevin-Ellen/tinyfords-photos/main${newUrl.pathname.replace('/images', '')}`;
+    `/Kevin-Ellen/tinyfords/main/photos/icons/favicon.ico` :
+    `/Kevin-Ellen/tinyfords/main/photos${newUrl.pathname.replace('/images', '')}`;
 
   const cacheTime = 604800;
+
+  console.log(newUrl);
 
 
   let response = await fetch(newUrl.toString(), {
