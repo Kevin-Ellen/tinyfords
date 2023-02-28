@@ -199,6 +199,8 @@ const dataCars = () => {
     { id:194, name: "1970 Ford Capri", make: "Ford", brand: "Matchbox", category: "Matchbox", added: "2023-02-20", base: "r20", code: "hfr64", type: "short",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
     { id:195, name: "2022 Ford F-150 Lightning", make: "Ford", brand: "Matchbox", category: "Matchbox", added: "2023-02-20", base: "r20", code: "hfr39", type: "short",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
     { id:196, name: "Ford Custom 300", make: "Ford", brand: "Matchbox", category: "Matchbox", added: "2023-02-20", base: "r19", code: "hfr41", type: "short",quantity: 2,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
+    { id:197, name: "Subaru WRX STI", make: "Subaru", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-02-24", base: "r38", code: "hkj10", type: "short",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
+    { id:198, name: "Mercedes-Benz 300 SL", make: "Mercedes Bens", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-02-24", base: "null", code: "hng51", type: "special",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
   ];
 }
 
