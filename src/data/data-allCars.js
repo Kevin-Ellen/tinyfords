@@ -205,6 +205,16 @@ const dataCars = () => {
     { id:200, name: "Exotic Envy", make: "Various", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-03-12", base: "null", code: "hff42", type: "special",quantity: 1,images: { cfName: "hw-hff42", front250: "hw-hff42-front-250"}},
     { id:201, name: "Ford F-150 - Colour Shifter", make: "Ford", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-03-12", base: "r02", code: "dnn11", type: "long",quantity: 1,images: { cfName: "hw-dnn11", front250: "hw-dnn11-front-250"}},
     { id:202, name: "Custom '54 Galaxie 500 & Ford C-800", make: "Ford", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-03-12", base: "null", code: "fyt15", type: "special",quantity: 1,images: { cfName: "hw-fyt15", front250: "hw-fyt15-front-250"}},
+    { id:203, name: "68 Ford Shelby GT500", make: "Ford", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-03-12", base: "null", code: "ghf58", type: "short",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
+    { id:204, name: "Ford GT40 MOC", make: "Ford", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-03-12", base: "null", code: "null", type: "short",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
+    { id:205, name: "'66 Ford 427 Fairline", make: "Ford", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-03-12", base: "null", code: "null", type: "short",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
+    { id:206, name: "Ford Mustang GT - Treasure Hunt", make: "Ford", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-03-12", base: "null", code: "null", type: "short",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
+    { id:207, name: "Ford Thunderbird Pro Stock 86", make: "Ford", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-03-12", base: "null", code: "null", type: "short",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
+    { id:208, name: "'65 Ford Ranchero", make: "Ford", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-03-12", base: "null", code: "null", type: "long",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
+    { id:209, name: "'69 Ford Talladega", make: "Ford", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-03-12", base: "null", code: "null", type: "long",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
+    { id:210, name: "'70 Ford Mustang Mach 1", make: "Ford", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-03-12", base: "null", code: "null", type: "long",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
+    { id:211, name: "'68 Ford Shelby GT500", make: "Ford", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-03-12", base: "null", code: "null", type: "long",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
+    { id:212, name: "Ford F-150 Lightning", make: "Ford", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-03-12", base: "null", code: "null", type: "short",quantity: 1,images: { cfName: "coming-soon", front250: "coming-soon-front-250"}},
   ];
 }
 
