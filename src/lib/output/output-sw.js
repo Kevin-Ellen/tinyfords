@@ -3,7 +3,7 @@
 const sw = (data) => {
 
   const caches = {
-    all: "v0.11", 
+    all: "v0.12", 
   };
 
   const endpoints = [
