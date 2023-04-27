@@ -249,6 +249,8 @@ const dataCars = () => {
     { id:244, name: "1966 Dodge Charger", make: "Dodge", brand: "Matchbox", category: "Matchbox", added: "2023-04-27",series:null, base: "null", code: "hld82", type: "box",quantity: 1,images: { cfName: "mb-hld82", front250: "mb-hld82-front-250"}},
     { id:245, name: "1970 Ford Ranchero", make: "Ford", brand: "Matchbox", category: "Matchbox", added: "2023-04-27",series:null, base: "null", code: "hld57", type: "box",quantity: 1,images: { cfName: "mb-hld57", front250: "mb-hld57-front-250"}},
     { id:246, name: "1970 Ford Ranchero", make: "Ford", brand: "Matchbox", category: "Matchbox", added: "2023-04-27",series:null, base: "r47", code: "hlc54", type: "short",quantity: 1,images: { cfName: "mb-hlc54", front250: "mb-hlc54-front-250"}},
+    { id:247, name: "'23 Ford Mustand RTR Spec 5 & Aero Lift", make: "Ford", brand: "Hot Wheels", category: "Hot Wheels", added: "2023-04-27",series:{id:3,name:"Car Culture: Team Transport",number:50, out: 52}, base: "s05", code: "hkf39", type: "premium",quantity: 1,images: { cfName: "hw-hkf39", front250: "hw-hkf39-front-250"}},
+    { id:248, name: "2022 Ford F-150 Lightning", make: "Ford", brand: "Matchbox", category: "Matchbox", added: "2023-04-27",series:null, base: "r37", code: "hlc83", type: "short",quantity: 1,images: { cfName: "mb-hlc83", front250: "mb-hlc83-front-250"}},
   ];
 }
 
