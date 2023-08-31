@@ -9,7 +9,7 @@
   },
   "author": "{{ authors }}",
   "license": "MIT",
-  "dependencies": {
-    "wrangler": "^2.20.1"
+  "devDependencies": {
+    "wrangler": "^3.6.0"
   }
 }
