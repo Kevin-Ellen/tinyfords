@@ -1,0 +1,198 @@
+.mainNav {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  max-width: 1200px;
+  background: white;
+}
+.mainNav .mainNavBox {
+  display: none;
+}
+.mainNav .mainNavBox ~ .mainNavMenu {
+  height: 0;
+  max-height: 0;
+  transition: all 0.5s;
+}
+@media only screen and (min-width: 500px) {
+  .mainNav .mainNavBox ~ .mainNavMenu {
+    height: auto;
+    max-height: revert;
+  }
+}
+.mainNav .mainNavBox:checked ~ .mainNavMenu {
+  height: auto;
+  max-height: 100vh;
+  margin-top: 16px;
+}
+@media only screen and (min-width: 500px) {
+  .mainNav .mainNavBox:checked ~ .mainNavMenu {
+    height: auto;
+    max-height: revert;
+  }
+}
+.mainNav .mainNavHeader {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr auto auto;
+  grid-auto-rows: 0;
+  align-items: center;
+  margin: 16px 24px;
+}
+@media only screen and (min-width: 500px) {
+  .mainNav .mainNavHeader {
+    grid-template-rows: 1fr auto;
+  }
+  .mainNav .mainNavHeader .mainNavMenu {
+    grid-column: 1/2;
+  }
+}
+.mainNav .mainNavHeader .mainNavRightSide {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+}
+.mainNav .mainNavHeader .mainNavRightSide .noNetwork {
+  align-self: center;
+  fill: rgb(237, 34, 40);
+}
+.mainNav .mainNavHeader .mainNavLabel {
+  width: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s;
+}
+.mainNav .mainNavHeader .mainNavLabel[for=mainNavBox] {
+  grid-column: 1/2;
+}
+@media only screen and (min-width: 500px) {
+  .mainNav .mainNavHeader .mainNavLabel[for=mainNavBox] {
+    display: none;
+  }
+}
+.mainNav .mainNavHeader .mainNavLabel[for=mainNavSearch] {
+  border-radius: 50%;
+  fill: rgb(248, 238, 37);
+  background: black;
+  grid-column: 3/3;
+  justify-self: right;
+}
+.mainNav .mainNavHeader .mainNavLabel[for=mainNavSearch]:hover {
+  background: rgb(0, 84, 144);
+  transition: all 0.3s;
+}
+.mainNav .mainNavHeader .mainNavName {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 600;
+  font-size: 1.5rem;
+  margin: 0;
+  grid-column: 2/3;
+  text-align: center;
+}
+.mainNav .mainNavHeader .mainNavName a {
+  color: black;
+  text-decoration: none;
+}
+.mainNav .mainNavHeader .mainNavName a:visited {
+  color: black;
+}
+.mainNav .mainNavHeader .mainNavName a:hover {
+  text-decoration: underline;
+}
+.mainNav .mainNavMenu {
+  overflow: hidden;
+  grid-column: 1/4;
+}
+@media only screen and (min-width: 500px) {
+  .mainNav .mainNavMenu {
+    overflow: revert;
+    grid-row: 1/2;
+    grid-column: 1/2;
+  }
+}
+.mainNav .mainNavMenu .mainMenu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+@media only screen and (min-width: 500px) {
+  .mainNav .mainNavMenu .mainMenu {
+    font-size: 0.8rem;
+  }
+}
+.mainNav .mainNavMenu .mainMenu li a {
+  padding: 16px;
+  display: block;
+  color: black;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+.mainNav .mainNavMenu .mainMenu li a:visited {
+  color: black;
+}
+.mainNav .mainNavMenu .mainMenu li a:hover {
+  transition: all 0.3s;
+  text-decoration: underline;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.5);
+}
+@media only screen and (min-width: 500px) {
+  .mainNav .mainNavMenu .mainMenu li a {
+    border: none;
+    padding: 16px 8px;
+  }
+}
+.mainNav .mainNavMenu .mainMenu li:not(:last-of-type) a {
+  border-bottom: 1.5px solid black;
+}
+@media only screen and (min-width: 500px) {
+  .mainNav .mainNavMenu .mainMenu li:not(:last-of-type) a {
+    border: none;
+  }
+}
+.mainNav .mainNavMenu .mainMenu li:nth-of-type(1) a {
+  border-top: 1.5px solid black;
+}
+@media only screen and (min-width: 500px) {
+  .mainNav .mainNavMenu .mainMenu li:nth-of-type(1) a {
+    border: none;
+  }
+}
+@media only screen and (min-width: 500px) {
+  .mainNav .mainNavMenu .mainMenu {
+    display: flex;
+    align-items: center;
+  }
+}
+.mainNav .mainNavBox {
+  display: none;
+}
+.mainNav .mainNavBox ~ .mainSearch {
+  height: 0;
+  max-height: 0;
+  transition: all 0.5s;
+  grid-column: 1/4;
+  grid-row: 3/4;
+}
+@media only screen and (min-width: 500px) {
+  .mainNav .mainNavBox ~ .mainSearch {
+    grid-row: 2/3;
+  }
+}
+.mainNav .mainNavBox[id=mainNavSearch]:checked ~ .mainSearch {
+  height: auto;
+  max-height: 100vh;
+}
+.mainNav .mainSearch {
+  background: white;
+  display: flex;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.mainNav .mainSearch .searchBar {
+  margin: 16px 0;
+  flex-grow: 1;
+}

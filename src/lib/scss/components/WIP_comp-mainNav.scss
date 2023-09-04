@@ -1,0 +1,117 @@
+// components > _comp-mainNav.scss - main navigation
+
+
+.mainNav{
+  .mainNavBox{
+    & ~ .mainNavMenu{
+      @include desktop{
+      }
+    }
+
+    &:checked ~ .mainNavMenu{
+      @include desktop{
+      }
+    }
+  }
+  
+
+  .mainNavHeader{
+    @include desktop{
+      .mainNavMenu{
+      }
+    }
+
+    .mainNavRightSide{
+      .noNetwork{
+      }
+    }
+
+    .mainNavLabel{
+      &[for="mainNavBox"]{
+        }
+      }
+      &[for="mainNavSearch"]{
+
+        &:hover{
+        }
+      }
+    }
+
+    .mainNavName{
+      a{
+        &:visited{
+        }
+        &:hover{
+        }
+      }
+    }
+  }
+
+  .mainNavMenu{
+    overflow:hidden;
+    grid-column: 1/4;
+
+    @include desktop{
+      overflow:revert;
+      grid-row: 1/2;
+      grid-column: 1/2;
+    }
+    
+
+    .mainMenu{
+      @include desktop{
+      }
+      li{
+        a{
+          @include desktop{
+          }
+
+        }
+        &:not(:last-of-type) a{
+          @include desktop{
+          }
+        }
+        &:nth-of-type(1) a{
+          @include desktop{
+          }
+        }
+      }
+      @include desktop{
+      }
+    }
+  }
+
+  .mainNavBox{
+    display: none;
+
+    & ~ .mainSearch{
+      height:0;
+      max-height:0;
+      transition:all 0.5s;
+      grid-column: 1/4;
+      grid-row: 3/4;
+
+      @include desktop{
+        grid-row: 2/3;
+      }
+    }
+
+    &[id='mainNavSearch']:checked ~ .mainSearch{
+      height:auto;
+      max-height:100vh;
+    }
+  }
+
+  .mainSearch{
+    background:map-deep-get($colours, backgrounds, menu);
+    display:flex;
+    justify-content:flex-end;
+    overflow: hidden;
+
+    .searchBar{
+      margin:map.get($spacing, padding) 0;
+      flex-grow: 1;
+    }
+  }
+}
+

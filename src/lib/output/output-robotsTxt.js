@@ -6,7 +6,8 @@ const robotsTxt = (url) => {
 
 export default robotsTxt;
 
-const robotstxtcontent =  (url) => `# Hello!
+const robotstxtcontent =  (url) => 
+`# Hello!
 user-agent: *
 allow: /
 
