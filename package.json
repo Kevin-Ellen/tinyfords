@@ -10,6 +10,6 @@
   "author": "{{ authors }}",
   "license": "MIT",
   "devDependencies": {
-    "wrangler": "^3.6.0"
+    "wrangler": "^3.10.1"
   }
 }
